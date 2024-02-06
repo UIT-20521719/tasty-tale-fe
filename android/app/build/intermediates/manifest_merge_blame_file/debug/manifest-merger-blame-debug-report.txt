@@ -1,0 +1,680 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tasty.recipev2"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:4:3-75
+11-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:4:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:2:3-64
+12-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:3:3-77
+13-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:3:20-75
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:5:3-63
+14-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:5:20-61
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:6:3-78
+15-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:6:20-76
+16
+17    <queries>
+17-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:7:3-13:13
+18        <intent>
+18-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:8:5-12:14
+19            <action android:name="android.intent.action.VIEW" />
+19-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:7-58
+19-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:15-56
+20
+21            <category android:name="android.intent.category.BROWSABLE" />
+21-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:7-67
+21-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:17-65
+22
+23            <data android:scheme="https" />
+23-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+23-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:13-35
+24        </intent>
+25
+26        <package android:name="host.exp.exponent" /> <!-- Query open documents -->
+26-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-53
+26-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-50
+27        <intent>
+27-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:18
+28            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+28-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-79
+28-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:21-76
+29        </intent>
+30        <intent>
+30-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-21:18
+31
+32            <!-- Required for picking images from the camera roll if targeting API 30 -->
+33            <action android:name="android.media.action.IMAGE_CAPTURE" />
+33-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-73
+33-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:21-70
+34        </intent>
+35        <intent>
+35-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-26:18
+36
+37            <!-- Required for picking images from the camera if targeting API 30 -->
+38            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+38-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-80
+38-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:21-77
+39        </intent>
+40        <intent>
+40-->[:expo-web-browser] D:\CDMobile\tasty-tale-fe\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:18
+41
+42            <!-- Required for opening tabs if targeting API 30 -->
+43            <action android:name="android.support.customtabs.action.CustomTabsService" />
+43-->[:expo-web-browser] D:\CDMobile\tasty-tale-fe\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-90
+43-->[:expo-web-browser] D:\CDMobile\tasty-tale-fe\node_modules\expo-web-browser\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:21-87
+44        </intent>
+45        <intent>
+45-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:10:9-16:18
+46            <action android:name="android.intent.action.GET_CONTENT" />
+46-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:11:13-72
+46-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:11:21-69
+47
+48            <category android:name="android.intent.category.OPENABLE" />
+48-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:13:13-73
+48-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:13:23-70
+49
+50            <data android:mimeType="*/*" />
+50-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+51        </intent>
+52    </queries>
+53
+54    <uses-permission android:name="android.permission.WAKE_LOCK" />
+54-->[:react-native-firebase_auth] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\auth\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-68
+54-->[:react-native-firebase_auth] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\auth\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-65
+55    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required for picking images from camera directly -->
+55-->[:react-native-firebase_auth] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\auth\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
+55-->[:react-native-firebase_auth] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\auth\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-76
+56    <uses-permission android:name="android.permission.CAMERA" />
+56-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-65
+56-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-62
+57    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+57-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-76
+57-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-73
+58    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+58-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-75
+58-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:22-72
+59    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+59-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\20521\.gradle\caches\transforms-3\610b53cc719bbf8fbe59268fe8de195d\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+59-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\20521\.gradle\caches\transforms-3\610b53cc719bbf8fbe59268fe8de195d\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+60
+61    <permission
+61-->[androidx.core:core:1.12.0] C:\Users\20521\.gradle\caches\transforms-3\afbc9aad2539a53aa31aa212f3bc2a94\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+62        android:name="com.tasty.recipev2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+62-->[androidx.core:core:1.12.0] C:\Users\20521\.gradle\caches\transforms-3\afbc9aad2539a53aa31aa212f3bc2a94\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+63        android:protectionLevel="signature" />
+63-->[androidx.core:core:1.12.0] C:\Users\20521\.gradle\caches\transforms-3\afbc9aad2539a53aa31aa212f3bc2a94\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+64
+65    <uses-permission android:name="com.tasty.recipev2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+65-->[androidx.core:core:1.12.0] C:\Users\20521\.gradle\caches\transforms-3\afbc9aad2539a53aa31aa212f3bc2a94\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+65-->[androidx.core:core:1.12.0] C:\Users\20521\.gradle\caches\transforms-3\afbc9aad2539a53aa31aa212f3bc2a94\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+66
+67    <application
+67-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:14:3-32:17
+68        android:name="com.tasty.recipev2.MainApplication"
+68-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:14:16-47
+69        android:allowBackup="true"
+69-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:14:162-188
+70        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+70-->[androidx.core:core:1.12.0] C:\Users\20521\.gradle\caches\transforms-3\afbc9aad2539a53aa31aa212f3bc2a94\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+71        android:debuggable="true"
+72        android:extractNativeLibs="false"
+73        android:icon="@mipmap/ic_launcher"
+73-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:14:81-115
+74        android:label="@string/app_name"
+74-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:14:48-80
+75        android:roundIcon="@mipmap/ic_launcher_round"
+75-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:14:116-161
+76        android:theme="@style/AppTheme"
+76-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:14:189-220
+77        android:usesCleartextTraffic="true" >
+77-->D:\CDMobile\tasty-tale-fe\android\app\src\debug\AndroidManifest.xml:6:18-53
+78        <meta-data
+78-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:15:5-83
+79            android:name="expo.modules.updates.ENABLED"
+79-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:15:16-59
+80            android:value="false" />
+80-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:15:60-81
+81        <meta-data
+81-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:16:5-105
+82            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+82-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:16:16-80
+83            android:value="ALWAYS" />
+83-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:16:81-103
+84        <meta-data
+84-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:17:5-99
+85            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+85-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:17:16-79
+86            android:value="0" />
+86-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:17:80-97
+87
+88        <activity
+88-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:5-30:16
+89            android:name="com.tasty.recipev2.MainActivity"
+89-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:15-43
+90            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|uiMode"
+90-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:44-134
+91            android:exported="true"
+91-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:256-279
+92            android:launchMode="singleTask"
+92-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:135-166
+93            android:screenOrientation="portrait"
+93-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:280-316
+94            android:theme="@style/Theme.App.SplashScreen"
+94-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:210-255
+95            android:windowSoftInputMode="adjustResize" >
+95-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:18:167-209
+96            <intent-filter>
+96-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:19:7-22:23
+97                <action android:name="android.intent.action.MAIN" />
+97-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:20:9-60
+97-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:20:17-58
+98
+99                <category android:name="android.intent.category.LAUNCHER" />
+99-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:21:9-68
+99-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:21:19-66
+100            </intent-filter>
+101            <intent-filter>
+101-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:23:7-29:23
+102                <action android:name="android.intent.action.VIEW" />
+102-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:7-58
+102-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:15-56
+103
+104                <category android:name="android.intent.category.DEFAULT" />
+104-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:9-67
+104-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:19-65
+105                <category android:name="android.intent.category.BROWSABLE" />
+105-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:7-67
+105-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:17-65
+106
+107                <data android:scheme="myapp" />
+107-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+107-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:13-35
+108                <data android:scheme="com.tasty.recipev2" />
+108-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+108-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:13-35
+109            </intent-filter>
+110        </activity>
+111        <activity
+111-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:31:5-106
+112            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+112-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:31:15-79
+113            android:exported="false" />
+113-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:31:80-104
+114
+115        <meta-data
+115-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-11:36
+116            android:name="app_data_collection_default_enabled"
+116-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-63
+117            android:value="true" />
+117-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-33
+118
+119        <service
+119-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-21:19
+120            android:name="com.google.firebase.components.ComponentDiscoveryService"
+120-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-84
+121            android:directBootAware="true"
+121-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-43
+122            android:exported="false" >
+122-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
+123            <meta-data
+123-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-20:85
+124                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+124-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:17-120
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:17-82
+126            <meta-data
+126-->[com.google.firebase:firebase-storage:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\6d85499ca4f1dda9b1ef7b887b116e14\transformed\jetified-firebase-storage-21.0.0\AndroidManifest.xml:30:13-32:85
+127                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+127-->[com.google.firebase:firebase-storage:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\6d85499ca4f1dda9b1ef7b887b116e14\transformed\jetified-firebase-storage-21.0.0\AndroidManifest.xml:31:17-118
+128                android:value="com.google.firebase.components.ComponentRegistrar" />
+128-->[com.google.firebase:firebase-storage:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\6d85499ca4f1dda9b1ef7b887b116e14\transformed\jetified-firebase-storage-21.0.0\AndroidManifest.xml:32:17-82
+129            <meta-data
+129-->[com.google.firebase:firebase-storage:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\6d85499ca4f1dda9b1ef7b887b116e14\transformed\jetified-firebase-storage-21.0.0\AndroidManifest.xml:33:13-35:85
+130                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+130-->[com.google.firebase:firebase-storage:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\6d85499ca4f1dda9b1ef7b887b116e14\transformed\jetified-firebase-storage-21.0.0\AndroidManifest.xml:34:17-107
+131                android:value="com.google.firebase.components.ComponentRegistrar" />
+131-->[com.google.firebase:firebase-storage:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\6d85499ca4f1dda9b1ef7b887b116e14\transformed\jetified-firebase-storage-21.0.0\AndroidManifest.xml:35:17-82
+132            <meta-data
+132-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:69:13-71:85
+133                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+133-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:70:17-109
+134                android:value="com.google.firebase.components.ComponentRegistrar" />
+134-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:71:17-82
+135            <meta-data
+135-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\20521\.gradle\caches\transforms-3\621ae2d7d590490863a04e051a87d680\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+136                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+136-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\20521\.gradle\caches\transforms-3\621ae2d7d590490863a04e051a87d680\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+137                android:value="com.google.firebase.components.ComponentRegistrar" />
+137-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\20521\.gradle\caches\transforms-3\621ae2d7d590490863a04e051a87d680\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+138            <meta-data
+138-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\20521\.gradle\caches\transforms-3\621ae2d7d590490863a04e051a87d680\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+139                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+139-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\20521\.gradle\caches\transforms-3\621ae2d7d590490863a04e051a87d680\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+140                android:value="com.google.firebase.components.ComponentRegistrar" />
+140-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\20521\.gradle\caches\transforms-3\621ae2d7d590490863a04e051a87d680\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+141            <meta-data
+141-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\da47f38b2a296e0d9263a498415ed250\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+142                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+142-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\da47f38b2a296e0d9263a498415ed250\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+143                android:value="com.google.firebase.components.ComponentRegistrar" />
+143-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\da47f38b2a296e0d9263a498415ed250\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+144            <meta-data
+144-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+145                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+145-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+146                android:value="com.google.firebase.components.ComponentRegistrar" />
+146-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+147        </service>
+148
+149        <provider
+149-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:9-27:38
+150            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+150-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-88
+151            android:authorities="com.tasty.recipev2.reactnativefirebaseappinitprovider"
+151-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-86
+152            android:exported="false"
+152-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-37
+153            android:initOrder="99" />
+153-->[:react-native-firebase_app] D:\CDMobile\tasty-tale-fe\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-35
+154
+155        <activity
+155-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-25:20
+156            android:name="expo.modules.devlauncher.launcher.DevLauncherActivity"
+156-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-81
+157            android:exported="true"
+157-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-36
+158            android:launchMode="singleTask"
+158-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-44
+159            android:theme="@style/Theme.DevLauncher.LauncherActivity" >
+159-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-70
+160            <intent-filter>
+160-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-24:29
+161                <action android:name="android.intent.action.VIEW" />
+161-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:7-58
+161-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:15-56
+162
+163                <category android:name="android.intent.category.DEFAULT" />
+163-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:9-67
+163-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:19-65
+164                <category android:name="android.intent.category.BROWSABLE" />
+164-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:7-67
+164-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:17-65
+165
+166                <data android:scheme="expo-dev-launcher" />
+166-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+166-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:13-35
+167            </intent-filter>
+168        </activity>
+169        <activity
+169-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:9-29:70
+170            android:name="expo.modules.devlauncher.launcher.errors.DevLauncherErrorActivity"
+170-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-93
+171            android:screenOrientation="portrait"
+171-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-49
+172            android:theme="@style/Theme.DevLauncher.ErrorActivity" />
+172-->[:expo-dev-launcher] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-67
+173        <activity
+173-->[:expo-dev-menu] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-21:20
+174            android:name="expo.modules.devmenu.DevMenuActivity"
+174-->[:expo-dev-menu] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-64
+175            android:exported="true"
+175-->[:expo-dev-menu] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-36
+176            android:launchMode="singleTask"
+176-->[:expo-dev-menu] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-44
+177            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" >
+177-->[:expo-dev-menu] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-75
+178            <intent-filter>
+178-->[:expo-dev-menu] D:\CDMobile\tasty-tale-fe\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-20:29
+179                <action android:name="android.intent.action.VIEW" />
+179-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:7-58
+179-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:15-56
+180
+181                <category android:name="android.intent.category.DEFAULT" />
+181-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:9-67
+181-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:19-65
+182                <category android:name="android.intent.category.BROWSABLE" />
+182-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:7-67
+182-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:17-65
+183
+184                <data android:scheme="expo-dev-menu" />
+184-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+184-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:13-35
+185            </intent-filter>
+186        </activity>
+187
+188        <provider
+188-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-30:20
+189            android:name="expo.modules.filesystem.FileSystemFileProvider"
+189-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-74
+190            android:authorities="com.tasty.recipev2.FileSystemFileProvider"
+190-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-74
+191            android:exported="false"
+191-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+192            android:grantUriPermissions="true" >
+192-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-47
+193            <meta-data
+193-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+194                android:name="android.support.FILE_PROVIDER_PATHS"
+194-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+195                android:resource="@xml/file_system_provider_paths" />
+195-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+196        </provider>
+197
+198        <service
+198-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:9-42:19
+199            android:name="com.google.android.gms.metadata.ModuleDependencies"
+199-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-78
+200            android:enabled="false"
+200-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-36
+201            android:exported="false" >
+201-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:13-37
+202            <intent-filter>
+202-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-37:29
+203                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+203-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:17-94
+203-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:25-91
+204            </intent-filter>
+205
+206            <meta-data
+206-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-41:36
+207                android:name="photopicker_activity:0:required"
+207-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:17-63
+208                android:value="" />
+208-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:17-33
+209        </service>
+210
+211        <activity
+211-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:44:9-46:59
+212            android:name="com.canhub.cropper.CropImageActivity"
+212-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-64
+213            android:exported="true"
+213-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:35:13-36
+214            android:theme="@style/Base.Theme.AppCompat" /> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+214-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-56
+215        <provider
+215-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:48:9-56:20
+216            android:name="expo.modules.imagepicker.fileprovider.ImagePickerFileProvider"
+216-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:49:13-89
+217            android:authorities="com.tasty.recipev2.ImagePickerFileProvider"
+217-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:50:13-75
+218            android:exported="false"
+218-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:51:13-37
+219            android:grantUriPermissions="true" >
+219-->[:expo-image-picker] D:\CDMobile\tasty-tale-fe\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:52:13-47
+220            <meta-data
+220-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+221                android:name="android.support.FILE_PROVIDER_PATHS"
+221-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+222                android:resource="@xml/image_picker_provider_paths" />
+222-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+223        </provider>
+224
+225        <meta-data
+225-->[:expo-modules-core] D:\CDMobile\tasty-tale-fe\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-11:89
+226            android:name="org.unimodules.core.AppLoader#react-native-headless"
+226-->[:expo-modules-core] D:\CDMobile\tasty-tale-fe\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-79
+227            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+227-->[:expo-modules-core] D:\CDMobile\tasty-tale-fe\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-86
+228        <meta-data
+228-->[:expo-modules-core] D:\CDMobile\tasty-tale-fe\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-15:45
+229            android:name="com.facebook.soloader.enabled"
+229-->[:expo-modules-core] D:\CDMobile\tasty-tale-fe\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-57
+230            android:value="true" />
+230-->[:expo-modules-core] D:\CDMobile\tasty-tale-fe\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-33
+231
+232        <provider
+232-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:23:9-31:20
+233            android:name="com.canhub.cropper.CropFileProvider"
+233-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:24:13-63
+234            android:authorities="com.tasty.recipev2.cropper.fileprovider"
+234-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:25:13-72
+235            android:exported="false"
+235-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:26:13-37
+236            android:grantUriPermissions="true" >
+236-->[com.github.CanHub:Android-Image-Cropper:4.3.1] C:\Users\20521\.gradle\caches\transforms-3\14125c964c070d4c32f517c510eedd94\transformed\jetified-Android-Image-Cropper-4.3.1\AndroidManifest.xml:27:13-47
+237            <meta-data
+237-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+238                android:name="android.support.FILE_PROVIDER_PATHS"
+238-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+239                android:resource="@xml/library_file_paths" />
+239-->[:expo-file-system] D:\CDMobile\tasty-tale-fe\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+240        </provider>
+241
+242        <meta-data
+242-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\20521\.gradle\caches\transforms-3\8fcb67aaed23928ee63b54292cbe2522\transformed\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:11:9-13:43
+243            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+243-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\20521\.gradle\caches\transforms-3\8fcb67aaed23928ee63b54292cbe2522\transformed\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:12:13-84
+244            android:value="GlideModule" />
+244-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\20521\.gradle\caches\transforms-3\8fcb67aaed23928ee63b54292cbe2522\transformed\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:13:13-40
+245
+246        <activity
+246-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:29:9-46:20
+247            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+247-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:30:13-80
+248            android:excludeFromRecents="true"
+248-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:31:13-46
+249            android:exported="true"
+249-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:32:13-36
+250            android:launchMode="singleTask"
+250-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:33:13-44
+251            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+251-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:34:13-72
+252            <intent-filter>
+252-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:35:13-45:29
+253                <action android:name="android.intent.action.VIEW" />
+253-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:7-58
+253-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:15-56
+254
+255                <category android:name="android.intent.category.DEFAULT" />
+255-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:9-67
+255-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:19-65
+256                <category android:name="android.intent.category.BROWSABLE" />
+256-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:7-67
+256-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:17-65
+257
+258                <data
+258-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+259                    android:host="firebase.auth"
+260                    android:path="/"
+261                    android:scheme="genericidp" />
+261-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:13-35
+262            </intent-filter>
+263        </activity>
+264        <activity
+264-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:47:9-64:20
+265            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+265-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:48:13-79
+266            android:excludeFromRecents="true"
+266-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:49:13-46
+267            android:exported="true"
+267-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:50:13-36
+268            android:launchMode="singleTask"
+268-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:51:13-44
+269            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+269-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:52:13-72
+270            <intent-filter>
+270-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\20521\.gradle\caches\transforms-3\7ae4c2bb89abc5f34b23e8ac3d0bbaa4\transformed\jetified-firebase-auth-23.0.0\AndroidManifest.xml:53:13-63:29
+271                <action android:name="android.intent.action.VIEW" />
+271-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:7-58
+271-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:9:15-56
+272
+273                <category android:name="android.intent.category.DEFAULT" />
+273-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:9-67
+273-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:25:19-65
+274                <category android:name="android.intent.category.BROWSABLE" />
+274-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:7-67
+274-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:10:17-65
+275
+276                <data
+276-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:7-37
+277                    android:host="firebase.auth"
+278                    android:path="/"
+279                    android:scheme="recaptcha" />
+279-->D:\CDMobile\tasty-tale-fe\android\app\src\main\AndroidManifest.xml:11:13-35
+280            </intent-filter>
+281        </activity>
+282
+283        <provider
+283-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+284            android:name="com.google.firebase.provider.FirebaseInitProvider"
+284-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+285            android:authorities="com.tasty.recipev2.firebaseinitprovider"
+285-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+286            android:directBootAware="true"
+286-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+287            android:exported="false"
+287-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+288            android:initOrder="100" />
+288-->[com.google.firebase:firebase-common:21.0.0] C:\Users\20521\.gradle\caches\transforms-3\199f0d05ecf72f0ab2edd7a98023fdca\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+289
+290        <service
+290-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+291            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+291-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+292            android:enabled="true"
+292-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+293            android:exported="false" >
+293-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+294            <meta-data
+294-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+295                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+295-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+296                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+296-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+297        </service>
+298
+299        <activity
+299-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+300            android:name="androidx.credentials.playservices.HiddenActivity"
+300-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+301            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+301-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+302            android:enabled="true"
+302-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+303            android:exported="false"
+303-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+304            android:fitsSystemWindows="true"
+304-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+305            android:theme="@style/Theme.Hidden" >
+305-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\20521\.gradle\caches\transforms-3\db75cea5cdffcb0edd7ae5c6355a6ba4\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+306        </activity>
+307        <activity
+307-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:23:9-27:75
+308            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+308-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:24:13-93
+309            android:excludeFromRecents="true"
+309-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:25:13-46
+310            android:exported="false"
+310-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:26:13-37
+311            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+311-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:27:13-72
+312        <!--
+313            Service handling Google Sign-In user revocation. For apps that do not integrate with
+314            Google Sign-In, this service will never be started.
+315        -->
+316        <service
+316-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:33:9-37:51
+317            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+317-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:34:13-89
+318            android:exported="true"
+318-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:35:13-36
+319            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+319-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:36:13-107
+320            android:visibleToInstantApps="true" />
+320-->[com.google.android.gms:play-services-auth:21.1.1] C:\Users\20521\.gradle\caches\transforms-3\440ca3236eb0b85cc1f3269de0ad32fa\transformed\jetified-play-services-auth-21.1.1\AndroidManifest.xml:37:13-48
+321
+322        <activity
+322-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\20521\.gradle\caches\transforms-3\f56b54614378d0eebbc86d6d6b70124b\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
+323            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+323-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\20521\.gradle\caches\transforms-3\f56b54614378d0eebbc86d6d6b70124b\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:20:19-85
+324            android:exported="false"
+324-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\20521\.gradle\caches\transforms-3\f56b54614378d0eebbc86d6d6b70124b\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:22:19-43
+325            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+325-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\20521\.gradle\caches\transforms-3\f56b54614378d0eebbc86d6d6b70124b\transformed\jetified-play-services-base-18.3.0\AndroidManifest.xml:21:19-78
+326
+327        <provider
+327-->[androidx.emoji2:emoji2:1.2.0] C:\Users\20521\.gradle\caches\transforms-3\9298d3b406051961256001c24f1a1ad8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+328            android:name="androidx.startup.InitializationProvider"
+328-->[androidx.emoji2:emoji2:1.2.0] C:\Users\20521\.gradle\caches\transforms-3\9298d3b406051961256001c24f1a1ad8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+329            android:authorities="com.tasty.recipev2.androidx-startup"
+329-->[androidx.emoji2:emoji2:1.2.0] C:\Users\20521\.gradle\caches\transforms-3\9298d3b406051961256001c24f1a1ad8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+330            android:exported="false" >
+330-->[androidx.emoji2:emoji2:1.2.0] C:\Users\20521\.gradle\caches\transforms-3\9298d3b406051961256001c24f1a1ad8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+331            <meta-data
+331-->[androidx.emoji2:emoji2:1.2.0] C:\Users\20521\.gradle\caches\transforms-3\9298d3b406051961256001c24f1a1ad8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+332                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+332-->[androidx.emoji2:emoji2:1.2.0] C:\Users\20521\.gradle\caches\transforms-3\9298d3b406051961256001c24f1a1ad8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+333                android:value="androidx.startup" />
+333-->[androidx.emoji2:emoji2:1.2.0] C:\Users\20521\.gradle\caches\transforms-3\9298d3b406051961256001c24f1a1ad8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+334            <meta-data
+334-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\20521\.gradle\caches\transforms-3\b322d559e0e58d7fba44369304c637e3\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+335                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+335-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\20521\.gradle\caches\transforms-3\b322d559e0e58d7fba44369304c637e3\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+336                android:value="androidx.startup" />
+336-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\20521\.gradle\caches\transforms-3\b322d559e0e58d7fba44369304c637e3\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+337            <meta-data
+337-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+338                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+338-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+339                android:value="androidx.startup" />
+339-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+340        </provider>
+341
+342        <meta-data
+342-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\20521\.gradle\caches\transforms-3\349f6c61f46c8be5b89258014fec6103\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+343            android:name="com.google.android.gms.version"
+343-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\20521\.gradle\caches\transforms-3\349f6c61f46c8be5b89258014fec6103\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+344            android:value="@integer/google_play_services_version" />
+344-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\20521\.gradle\caches\transforms-3\349f6c61f46c8be5b89258014fec6103\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+345
+346        <receiver
+346-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+347            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+347-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+348            android:directBootAware="false"
+348-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+349            android:enabled="true"
+349-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+350            android:exported="true"
+350-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+351            android:permission="android.permission.DUMP" >
+351-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+352            <intent-filter>
+352-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+353                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+353-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+353-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+354            </intent-filter>
+355            <intent-filter>
+355-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+356                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+356-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+356-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+357            </intent-filter>
+358            <intent-filter>
+358-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+359                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+359-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+359-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+360            </intent-filter>
+361            <intent-filter>
+361-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+362                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+362-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+362-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\20521\.gradle\caches\transforms-3\372f383eb405d14f1ca14efbdf666c06\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+363            </intent-filter>
+364        </receiver>
+365    </application>
+366
+367</manifest>
