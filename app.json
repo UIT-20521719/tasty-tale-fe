@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tasty-recipe-v2",
+    "name": "Tasty Recipe v2",
     "slug": "tasty-recipe-v2",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tasty.recipev2"
     },
     "web": {
       "bundler": "metro",
