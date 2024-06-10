@@ -53,7 +53,7 @@ function Layout() {
 					}}
 				/>
 				<Stack.Screen
-					name="modals/courseSearch"
+					name="modals/create-new-item"
 					options={{
 						headerShown: false,
 						presentation: "modal",
@@ -61,11 +61,39 @@ function Layout() {
 					}}
 				/>
 				<Stack.Screen
-					name="modals/chatSearch"
+					name="modals/new-recipe"
 					options={{
 						headerShown: false,
 						presentation: "modal",
 						animation: "fade_from_bottom",
+					}}
+				/>
+				<Stack.Screen
+					name="modals/new-ingredient"
+					options={{
+						title: "Add new ingredient",
+						headerShown: true,
+						presentation: "modal",
+						animation: "fade_from_bottom",
+						headerShadowVisible: false,
+						headerStyle: { backgroundColor: "white" },
+						headerTintColor: "black",
+						headerTitleStyle: { fontSize: 16 },
+						headerTitleAlign: "center",
+					}}
+				/>
+				<Stack.Screen
+					name="modals/new-step"
+					options={{
+						title: "Add new step",
+						headerShown: true,
+						presentation: "modal",
+						animation: "fade_from_bottom",
+						headerShadowVisible: false,
+						headerStyle: { backgroundColor: "white" },
+						headerTintColor: "black",
+						headerTitleStyle: { fontSize: 16 },
+						headerTitleAlign: "center",
 					}}
 				/>
 				<Stack.Screen
