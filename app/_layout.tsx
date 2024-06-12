@@ -69,6 +69,14 @@ function Layout() {
 					}}
 				/>
 				<Stack.Screen
+					name="modals/new-cookbook"
+					options={{
+						headerShown: false,
+						presentation: "modal",
+						animation: "fade_from_bottom",
+					}}
+				/>
+				<Stack.Screen
 					name="modals/new-ingredient"
 					options={{
 						title: "Add new ingredient",

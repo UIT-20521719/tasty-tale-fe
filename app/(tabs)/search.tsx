@@ -16,7 +16,7 @@ export default function TabTwoScreen() {
 	const { data } = useQuery<Recipe[]>({
 		queryKey: ["recipes", searchKeyword],
 		queryFn: searchRecipe,
-		enabled: !!keyword,
+		enabled: !!searchKeyword,
 	});
 
 	return (

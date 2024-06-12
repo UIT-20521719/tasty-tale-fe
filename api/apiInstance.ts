@@ -12,6 +12,7 @@ apiInstance.defaults.headers.common["Content-Type"] = "application/json";
 const authenticationInterceptor = apiInstance.interceptors.request.use(
 	(request) => {
 		const accessToken = useAuth.getState().accessToken;
+		console.log({ accessToken });
 		if (accessToken && !request.headers.getAuthorization()) {
 			request.headers.setAuthorization(`Bearer ${accessToken}`);
 			request.withCredentials = true;
