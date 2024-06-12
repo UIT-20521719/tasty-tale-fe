@@ -5,7 +5,7 @@ import {
 } from "expo-image-picker";
 import { useState } from "react";
 import { FlatList, Image, ScrollView, Text, View } from "react-native";
-import PrimaryButton from "./PrimaryButton";
+import SecondaryButton from "./SecondaryButton";
 
 type Props = {
 	title: string;
@@ -57,11 +57,10 @@ export default function ImageSelector({ title, onChange }: Props) {
 					keyExtractor={(item) => item.uri}
 				/>
 			</ScrollView>
-			<PrimaryButton onPress={pickImage}>
-				<Text style={{ fontWeight: "500", color: "white" }}>
-					Select images
-				</Text>
-			</PrimaryButton>
+			<SecondaryButton
+				text={"Select images"}
+				onPress={pickImage}
+			></SecondaryButton>
 		</View>
 	);
 }

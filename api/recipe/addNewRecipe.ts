@@ -2,7 +2,7 @@ import { Recipe } from "@/types/Recipe";
 import apiInstance from "../apiInstance";
 
 export default async function addNewRecipeApi(
-	recipe: Omit<Recipe, "user" | "likes" | "reviewNum">
+	recipe: Omit<Recipe, "user" | "likes" | "reviewNum" | "id">
 ) {
 	const response = await apiInstance.post(`/v1/recipe`, recipe);
 

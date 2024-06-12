@@ -12,6 +12,7 @@ import { uploadToFirebaseStorage } from "@/utils/uploadToFirebaseStorage";
 import { useMutation } from "@tanstack/react-query";
 import { ImagePickerAsset } from "expo-image-picker";
 import { useEffect, useState } from "react";
+import { router } from "expo-router";
 
 export default function Modal() {
 	const { title, description, timeToCook, ingredients, steps, update, reset } =
@@ -23,6 +24,8 @@ export default function Modal() {
 		mutationFn: addNewRecipeApi,
 		onSuccess(data, variables, context) {
 			console.log({ data });
+			reset();
+			router.push("/");
 		},
 		onError(error, variables, context) {
 			console.log({ error });

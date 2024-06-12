@@ -1,8 +1,8 @@
 import { useNewRecipe } from "@/store/new-recipe.store";
-import { FlatList, Text, View } from "react-native";
-import PrimaryButton from "./PrimaryButton";
 import { router } from "expo-router";
+import { FlatList, Text, View } from "react-native";
 import HorizontalImage from "./HorizontalImage";
+import SecondaryButton from "./SecondaryButton";
 
 export default function StepSelector() {
 	const { steps, update } = useNewRecipe();
@@ -63,15 +63,12 @@ export default function StepSelector() {
 					</View>
 				)}
 			/>
-			<PrimaryButton
+			<SecondaryButton
 				onPress={() => {
 					router.push("/modals/new-step");
 				}}
-			>
-				<Text style={{ fontWeight: "500", color: "white" }}>
-					Add new step
-				</Text>
-			</PrimaryButton>
+				text={"Add new step"}
+			></SecondaryButton>
 		</View>
 	);
 }

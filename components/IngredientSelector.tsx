@@ -1,7 +1,7 @@
 import { useNewRecipe } from "@/store/new-recipe.store";
-import { FlatList, Text, View } from "react-native";
-import PrimaryButton from "./PrimaryButton";
 import { router } from "expo-router";
+import { FlatList, Text, View } from "react-native";
+import SecondaryButton from "./SecondaryButton";
 
 export default function IngredientSelector() {
 	const { ingredients, update } = useNewRecipe();
@@ -29,15 +29,12 @@ export default function IngredientSelector() {
 					</View>
 				)}
 			/>
-			<PrimaryButton
+			<SecondaryButton
+				text={"Add new ingredient"}
 				onPress={() => {
 					router.push("/modals/new-ingredient");
 				}}
-			>
-				<Text style={{ fontWeight: "500", color: "white" }}>
-					Add new ingredient
-				</Text>
-			</PrimaryButton>
+			></SecondaryButton>
 		</View>
 	);
 }

@@ -4,6 +4,7 @@ import { Step } from "./Step";
 import { User } from "./User";
 
 export type Recipe = {
+	id: string;
 	title: string;
 	description: string;
 	timeToCook: number;
