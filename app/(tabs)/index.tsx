@@ -1,24 +1,17 @@
-import { StyleSheet, ScrollView } from "react-native";
+import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
 
-import viewDetailRecipe from "@/api/recipe/viewDetail";
-import { useQuery } from "@tanstack/react-query";
-import UserProfile from "@/components/UserProfile";
-import { Recipe } from "@/types/Recipe";
 import HeaderTitle from "@/components/HeaderTitle";
+import UserProfile from "@/components/UserProfile";
 import { useMount } from "@/hooks/common/useMount";
 import { useAuth } from "@/store/auth.store";
-import { useEffect } from "react";
 import { router } from "expo-router";
+import { useEffect } from "react";
+import Carousel from "react-native-reanimated-carousel";
+import RecommendCookbook from "@/components/RecommendCookbook";
 
 export default function HomeScreen() {
 	const isMount = useMount();
 	const { isLogin, displayname, photoUrl } = useAuth();
-
-	// const { data, isLoading, error } = useQuery<Recipe>({
-	// 	queryKey: ["recipe", "4bd5d173-7e4e-4e35-9e02-0518114b8aff"],
-	// 	queryFn: viewDetailRecipe,
-	// });
-	// console.log({ data, isLoading, error });
 
 	useEffect(() => {
 		if (!isLogin && isMount) {
@@ -36,6 +29,7 @@ export default function HomeScreen() {
 		>
 			<UserProfile user={{ displayname, photoUrl }} />
 			<HeaderTitle style={{ marginTop: 24 }}>Cookbooks</HeaderTitle>
+			<RecommendCookbook style={{ marginTop: 16 }} />
 		</ScrollView>
 	);
 }

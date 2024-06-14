@@ -14,7 +14,6 @@ export default function FirebaseImage({ id, ...props }: Props) {
 		const pathReference = ref(storage, id);
 		getDownloadURL(pathReference)
 			.then((url) => {
-				console.log({ url });
 				setUrl(url);
 			})
 			.catch((error) => {

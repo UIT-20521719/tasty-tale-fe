@@ -36,7 +36,11 @@ export default function Modal() {
 							Create new recipe
 						</Text>
 					</PrimaryButton>
-					<PrimaryButton onPress={() => {}}>
+					<PrimaryButton
+						onPress={() => {
+							router.push("/modals/new-cookbook");
+						}}
+					>
 						<Text style={{ color: "white", fontWeight: "600" }}>
 							Create new cookbook
 						</Text>

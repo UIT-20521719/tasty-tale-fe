@@ -1,30 +1,25 @@
-import TextInputWithTitle from "@/components/TextInputWithTitle";
-import { ScrollView, Text, View } from "react-native";
+import { Alert, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import addNewRecipeApi from "@/api/recipe/addNewRecipe";
-import ImageSelector from "@/components/ImageSelector";
-import IngredientSelector from "@/components/IngredientSelector";
+import OwnRecipe from "@/components/OwnRecipe";
 import PrimaryButton from "@/components/PrimaryButton";
-import StepSelector from "@/components/StepSelector";
-import { useNewRecipe } from "@/store/new-recipe.store";
-import { uploadToFirebaseStorage } from "@/utils/uploadToFirebaseStorage";
+import SelectedRecipe from "@/components/SelectedRecipe";
+import TextInputWithTitle from "@/components/TextInputWithTitle";
+import { Recipe } from "@/types/Recipe";
+import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { ImagePickerAsset } from "expo-image-picker";
-import { useEffect, useState } from "react";
+import addNewCookbookApi from "@/api/cookbook/addNewCookbook";
 import { router } from "expo-router";
 
 export default function Modal() {
-	const { title, description, timeToCook, ingredients, steps, update, reset } =
-		useNewRecipe();
-
-	const [images, setImages] = useState<ImagePickerAsset[]>([]);
+	const [name, setName] = useState<string>();
+	const [description, setDescription] = useState<string>("");
+	const [recipes, setRecipes] = useState<Recipe[]>([]);
 
 	const { mutate } = useMutation({
-		mutationFn: addNewRecipeApi,
+		mutationFn: addNewCookbookApi,
 		onSuccess(data, variables, context) {
-			console.log({ data });
-			reset();
+			console.log({ cookbook: data });
 			router.push("/");
 		},
 		onError(error, variables, context) {
@@ -32,37 +27,16 @@ export default function Modal() {
 		},
 	});
 
-	useEffect(() => {
-		reset();
-	}, []);
-
-	async function addRecipe() {
-		mutate({
-			title,
-			description,
-			timeToCook,
-			images: (
-				await Promise.all(
-					images.map(
-						async (image) => await uploadToFirebaseStorage(image.uri)
-					)
-				)
-			).map((url) => ({ url })),
-			ingredients,
-			steps: await Promise.all(
-				steps.map(async (step) => ({
-					...step,
-					images: (
-						await Promise.all(
-							step.images.map(
-								async (image) =>
-									await uploadToFirebaseStorage(image.url)
-							)
-						)
-					).map((url) => ({ url })),
-				}))
-			),
-		});
+	async function addCookbook() {
+		if (!name) Alert.alert("Cookbook name must not be empty");
+		else if (!recipes.length)
+			Alert.alert("Cookbook must have at least 1 recipe");
+		else
+			mutate({
+				name,
+				description,
+				recipes: recipes.map((recipe) => recipe.id),
+			});
 	}
 
 	return (
@@ -84,7 +58,7 @@ export default function Modal() {
 						marginTop: 20,
 					}}
 				>
-					Create new recipe
+					Create new cookbook
 				</Text>
 				<View
 					style={{
@@ -96,35 +70,31 @@ export default function Modal() {
 				>
 					<TextInputWithTitle
 						title="Name"
-						value={title}
-						onChangeText={(value) => {
-							update({ title: value });
-						}}
+						value={name}
+						onChangeText={setName}
 					/>
 					<TextInputWithTitle
 						title="Description"
 						value={description}
-						onChangeText={(value) => {
-							update({ description: value });
+						onChangeText={setDescription}
+					/>
+					<SelectedRecipe
+						selected={recipes}
+						onSelect={(recipe) => {
+							setRecipes((prev) =>
+								prev.filter((r) => r.id != recipe.id)
+							);
 						}}
 					/>
-					<TextInputWithTitle
-						title="Time to cook"
-						type={"number-pad"}
-						value={timeToCook}
-						onChangeText={(value) => {
-							update({ timeToCook: value });
+					<OwnRecipe
+						selected={recipes}
+						onSelect={(recipe) => {
+							setRecipes((prev) => [...prev, recipe]);
 						}}
 					/>
-					<ImageSelector
-						title="Images"
-						onChange={(images) => setImages(images)}
-					/>
-					<IngredientSelector />
-					<StepSelector />
-					<PrimaryButton onPress={addRecipe}>
+					<PrimaryButton onPress={addCookbook}>
 						<Text style={{ color: "white", fontWeight: "600" }}>
-							Add new recipe
+							Add new cookbook
 						</Text>
 					</PrimaryButton>
 				</View>
