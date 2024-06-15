@@ -23,7 +23,6 @@ export default function Modal() {
 	const { mutate } = useMutation({
 		mutationFn: addNewRecipeApi,
 		onSuccess(data, variables, context) {
-			console.log({ data });
 			reset();
 			router.push("/");
 		},

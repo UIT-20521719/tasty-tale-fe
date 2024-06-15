@@ -19,7 +19,6 @@ export default function Modal() {
 	const { mutate } = useMutation({
 		mutationFn: addNewCookbookApi,
 		onSuccess(data, variables, context) {
-			console.log({ cookbook: data });
 			router.push("/");
 		},
 		onError(error, variables, context) {

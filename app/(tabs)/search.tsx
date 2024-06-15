@@ -1,4 +1,11 @@
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+	FlatList,
+	ScrollView,
+	StyleSheet,
+	Text,
+	TouchableNativeFeedback,
+	View,
+} from "react-native";
 
 import PrimaryButton from "@/components/PrimaryButton";
 import SearchInput from "@/components/SearchInput";
@@ -8,16 +15,15 @@ import searchRecipe from "@/api/recipe/search";
 import { useState } from "react";
 import { Recipe } from "@/types/Recipe";
 import RecipeLargeCard from "@/components/RecipeLargeCard";
+import { useRecentSearch } from "@/store/recent-search.store";
+import HeaderTitle from "@/components/HeaderTitle";
+import { router } from "expo-router";
 
 export default function TabTwoScreen() {
 	const [keyword, setKeyword] = useState("");
 	const [searchKeyword, setSearchKeyword] = useState("");
 
-	const { data } = useQuery<Recipe[]>({
-		queryKey: ["recipes", searchKeyword],
-		queryFn: searchRecipe,
-		enabled: !!searchKeyword,
-	});
+	const { keywords, addKeyword } = useRecentSearch();
 
 	return (
 		<SafeAreaView style={{ backgroundColor: "white" }}>
@@ -35,24 +41,52 @@ export default function TabTwoScreen() {
 						value={keyword}
 						onChangeText={setKeyword}
 					/>
-					<PrimaryButton onPress={() => setSearchKeyword(keyword)}>
+					<PrimaryButton
+						onPress={() => {
+							setSearchKeyword(keyword);
+							addKeyword(keyword);
+							router.push(`/modals/search-result?keyword=${keyword}`);
+						}}
+					>
 						<Text style={{ color: "white", fontWeight: "600" }}>
 							Search
 						</Text>
 					</PrimaryButton>
 				</View>
-
-				<Text style={{ fontWeight: "600", fontSize: 20, marginTop: 20 }}>
-					Result
-				</Text>
-				{data ? (
+				<View style={{ marginTop: 20 }}>
+					<HeaderTitle>Recent search</HeaderTitle>
 					<FlatList
-						scrollEnabled={false}
-						data={data}
-						renderItem={({ item }) => <RecipeLargeCard recipe={item} />}
-						keyExtractor={(item) => item.id}
+						style={{ marginTop: 16 }}
+						data={keywords}
+						contentContainerStyle={{
+							display: "flex",
+							flexDirection: "column",
+							gap: 8,
+						}}
+						renderItem={({ item }) => (
+							<TouchableNativeFeedback
+								style={{
+									borderRadius: 8,
+								}}
+							>
+								<View
+									style={{
+										paddingHorizontal: 8,
+										paddingVertical: 4,
+										borderRadius: 8,
+										borderWidth: 0.5,
+										borderColor: "black",
+									}}
+								>
+									<Text style={{ fontSize: 18, fontWeight: "400" }}>
+										{item}
+									</Text>
+								</View>
+							</TouchableNativeFeedback>
+						)}
+						keyExtractor={(item) => item}
 					/>
-				) : null}
+				</View>
 			</ScrollView>
 		</SafeAreaView>
 	);

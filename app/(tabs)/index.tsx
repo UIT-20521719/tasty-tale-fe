@@ -1,17 +1,16 @@
-import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
-import HeaderTitle from "@/components/HeaderTitle";
+import FeatureRecipe from "@/components/FeatureRecipe";
+import RecommendCookbook from "@/components/RecommendCookbook";
 import UserProfile from "@/components/UserProfile";
 import { useMount } from "@/hooks/common/useMount";
 import { useAuth } from "@/store/auth.store";
 import { router } from "expo-router";
 import { useEffect } from "react";
-import Carousel from "react-native-reanimated-carousel";
-import RecommendCookbook from "@/components/RecommendCookbook";
 
 export default function HomeScreen() {
 	const isMount = useMount();
-	const { isLogin, displayname, photoUrl } = useAuth();
+	const { isLogin, displayname, photoUrl, accessToken } = useAuth();
 
 	useEffect(() => {
 		if (!isLogin && isMount) {
@@ -27,9 +26,18 @@ export default function HomeScreen() {
 				paddingHorizontal: 16,
 			}}
 		>
-			<UserProfile user={{ displayname, photoUrl }} />
-			<HeaderTitle style={{ marginTop: 24 }}>Cookbooks</HeaderTitle>
-			<RecommendCookbook style={{ marginTop: 16 }} />
+			<View
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					gap: 16,
+					paddingBottom: 40,
+				}}
+			>
+				<UserProfile user={{ displayname, photoUrl }} />
+				<RecommendCookbook />
+				<FeatureRecipe />
+			</View>
 		</ScrollView>
 	);
 }

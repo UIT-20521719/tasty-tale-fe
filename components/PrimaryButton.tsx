@@ -4,7 +4,7 @@ import { TouchableNativeFeedback, View } from "react-native";
 type Props = {
 	onPress?: () => any;
 	children: ReactNode;
-};
+} & React.ComponentPropsWithoutRef<typeof View>;
 
 export default function PrimaryButton({ children, onPress }: Props) {
 	return (

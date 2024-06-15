@@ -2,6 +2,8 @@ import { User } from "@/types/User";
 import { Image, Text, TouchableNativeFeedback, View } from "react-native";
 import { ThemedText } from "./ThemedText";
 import { router } from "expo-router";
+import PrimaryButton from "./PrimaryButton";
+import { useAuth } from "@/store/auth.store";
 
 type Props = {
 	user: {
@@ -11,8 +13,19 @@ type Props = {
 };
 
 export default function UserProfile({ user }: Props) {
+	const { logout } = useAuth();
+
 	return (
-		<View style={{ marginTop: 20, borderRadius: 12, overflow: "hidden" }}>
+		<View
+			style={{
+				marginTop: 20,
+				borderRadius: 12,
+				overflow: "hidden",
+				display: "flex",
+				flexDirection: "column",
+				gap: 12,
+			}}
+		>
 			<TouchableNativeFeedback
 				onPress={() => {
 					router.push("/modals/create-new-item");
@@ -76,6 +89,14 @@ export default function UserProfile({ user }: Props) {
 					</View>
 				</View>
 			</TouchableNativeFeedback>
+			<PrimaryButton
+				onPress={() => {
+					logout();
+					router.push("/modals/login");
+				}}
+			>
+				<Text style={{ fontWeight: "600", color: "white" }}>Log out</Text>
+			</PrimaryButton>
 		</View>
 	);
 }

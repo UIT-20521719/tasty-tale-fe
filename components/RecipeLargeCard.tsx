@@ -62,7 +62,7 @@ export default function RecipeLargeCard({ recipe }: Props) {
 								overflow: "hidden",
 							}}
 						>
-							{recipe.user.photoUrl ? (
+							{recipe.user?.photoUrl ? (
 								<Image
 									src={recipe.user.photoUrl}
 									style={{ width: 50, height: 50 }}
@@ -77,8 +77,8 @@ export default function RecipeLargeCard({ recipe }: Props) {
 								gap: 8,
 							}}
 						>
-							<Text style={{ fontWeight: "600", fontSize: 18 }}>
-								{recipe.user.displayname}
+							<Text style={{ fontWeight: "600", fontSize: 16 }}>
+								{recipe.user?.displayname}
 							</Text>
 							<View
 								style={{
