@@ -4,6 +4,7 @@ import { ThemedText } from "./ThemedText";
 import { router } from "expo-router";
 import PrimaryButton from "./PrimaryButton";
 import { useAuth } from "@/store/auth.store";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
 type Props = {
 	user: {
@@ -93,6 +94,7 @@ export default function UserProfile({ user }: Props) {
 				onPress={() => {
 					logout();
 					router.push("/modals/login");
+					GoogleSignin.signOut();
 				}}
 			>
 				<Text style={{ fontWeight: "600", color: "white" }}>Log out</Text>

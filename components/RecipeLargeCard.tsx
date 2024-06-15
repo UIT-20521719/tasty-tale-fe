@@ -1,6 +1,7 @@
 import { Recipe } from "@/types/Recipe";
 import { Image, Text, TouchableNativeFeedback, View } from "react-native";
 import FirebaseImage from "./FirebaseImage";
+import { router } from "expo-router";
 
 type Props = {
 	recipe: Recipe;
@@ -11,6 +12,9 @@ export default function RecipeLargeCard({ recipe }: Props) {
 		<View style={{ borderRadius: 16, overflow: "hidden" }}>
 			<TouchableNativeFeedback
 				style={{ borderRadius: 16, overflow: "hidden" }}
+				onPress={() => {
+					router.push(`/modals/detail-recipe?id=${recipe.id}`);
+				}}
 			>
 				<View
 					style={{

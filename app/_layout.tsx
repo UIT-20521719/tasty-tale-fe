@@ -77,6 +77,14 @@ function Layout() {
 					}}
 				/>
 				<Stack.Screen
+					name="modals/detail-recipe"
+					options={{
+						headerShown: false,
+						presentation: "modal",
+						animation: "fade_from_bottom",
+					}}
+				/>
+				<Stack.Screen
 					name="modals/search-result"
 					options={{
 						title: "Search result",
